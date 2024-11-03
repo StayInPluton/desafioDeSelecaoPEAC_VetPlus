@@ -1,0 +1,43 @@
+{{#each errors}}
+<div class="alert alert-primary" role="alert">
+  {{text}}
+</div>
+{{/each}}
+
+<div class="container mt-5">
+  <div class="bg-white p-4 rounded shadow"> <!-- Fundo branco, padding, bordas arredondadas e sombra -->
+    <h2 class="title text-black">Editar animal</h2>
+    <form id="animalForm" method="POST" action="/editar">
+      <input type="hidden" name="id" value="{{animal._id}}" />
+      <div class="form-group">
+        <label for="name" class="text-dark">Nome do Animal</label>
+        <input type="text" class="form-control" id="name" name="name" value="{{animal.name}}" required />
+      </div>
+      <div class="form-group">
+        <label for="age" class="text-dark">Idade</label>
+        <input type="number" class="form-control" id="age" name="age" value="{{animal.age}}" required />
+      </div>
+      <div class="form-group">
+        <label for="breed" class="text-dark">Raça</label>
+        <input type="text" class="form-control" id="breed" name="breed" value="{{animal.breed}}" required />
+      </div>
+      <div class="form-group">
+        <label for="owner" class="text-dark">Nome do Proprietário</label>
+        <input type="text" class="form-control" id="owner" name="owner" value="{{animal.owner}}" required />
+      </div>
+      <div class="form-group">
+        <label for="phone" class="text-dark">Telefone</label>
+        <input type="tel" class="form-control" id="phone" name="phone" value="{{animal.phone}}" required />
+      </div>
+      <div class="form-group">
+        <label for="email" class="text-dark">Email</label>
+        <input type="email" class="form-control" id="email" name="email" value="{{animal.email}}" />
+      </div>
+      <div class="form-group">
+        <label for="problem" class="text-dark">Problema de Saúde</label>
+        <textarea class="form-control" id="problem" name="problem" rows="3" required>{{animal.problem}}</textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar Animal</button>
+    </form>
+  </div>
+</div>

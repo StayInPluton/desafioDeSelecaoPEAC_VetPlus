@@ -1,0 +1,32 @@
+<h2 class="title">Lista de pacientes</h2>
+<div class="row">
+  {{#each animals}}
+  <div class="col-md-4 mb-4">
+
+    <!-- Divisão de 3 colunas -->
+    <div class="card" style="width: 18rem;">
+      <div class="card-body bg-primary text-white">
+        <h5 class="card-title">{{name}}</h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><b>Idade:</b> {{age}}</li>
+        <li class="list-group-item"><b>Raça:</b> {{breed}}</li>
+        <li class="list-group-item"><b>Queixa:</b> <br /> {{problem}}</li>
+      </ul>
+      <div class="card-body">
+        <h5 class="card-title">{{owner}}</h5>
+        <p class="card-text">Numero: {{phone}}</p>
+        <p class="card-text">Email: {{email}}</p>
+      </div>
+      <div class="card-body d-flex justify-content-between">
+        <a href="/editarAnimal/edit/{{_id}}" method="GET" class="card-link btn btn-warning flex-grow-1 me-2">Editar</a>
+        <form action="/deletarAnimal" method="POST" class="flex-grow-1">
+          <input type="hidden" name="id" value="{{_id}}" />
+          <button type="submit" class="card-link btn btn-danger w-100">Excluir</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  {{/each}}
+</div>

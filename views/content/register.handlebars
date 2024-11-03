@@ -1,0 +1,42 @@
+{{#each errors}}
+<div class="alert alert-primary" role="alert">
+  {{text}}
+</div>
+{{/each}}
+
+<div class="container mt-5">
+  <div class="bg-white p-4 rounded shadow"> <!-- Fundo branco, padding, bordas arredondadas e sombra -->
+    <h2 class="title text-dark">Registrar animal</h2>
+    <form id="animalForm" method="POST" action="/cadastrarAnimal">
+      <div class="form-group">
+        <label for="name" class="text-dark">Nome do Animal</label>
+        <input type="text" class="form-control" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="age" class="text-dark">Idade</label>
+        <input type="number" class="form-control" id="age" name="age" required />
+      </div>
+      <div class="form-group">
+        <label for="breed" class="text-dark">Raça</label>
+        <input type="text" class="form-control" id="breed" name="breed" required />
+      </div>
+      <div class="form-group">
+        <label for="owner" class="text-dark">Nome do Proprietário</label>
+        <input type="text" class="form-control" id="owner" name="owner" required />
+      </div>
+      <div class="form-group">
+        <label for="phone" class="text-dark">Telefone</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required />
+      </div>
+      <div class="form-group">
+        <label for="email" class="text-dark">Email</label>
+        <input type="email" class="form-control" id="email" name="email" />
+      </div>
+      <div class="form-group">
+        <label for="problem" class="text-dark">Problema de Saúde</label>
+        <textarea class="form-control" id="problem" name="problem" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Cadastrar Animal</button>
+    </form>
+  </div>
+</div>

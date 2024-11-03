@@ -1,0 +1,19 @@
+{
+  "name": "vetplus",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "phsb3@discente.ifpe.edu.br",
+  "license": "ISC",
+  "description": "projeto feito como o obejtivo de mostrar minhas capacidades em criar um CRUD para a seleção de um projeto de extenção",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "bootstrap": "^5.3.3",
+    "express": "^4.21.1",
+    "express-handlebars": "^8.0.1",
+    "handlebars": "^4.7.8",
+    "mongoose": "^8.8.0"
+  }
+}
