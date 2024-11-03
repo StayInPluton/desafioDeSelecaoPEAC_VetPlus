@@ -1,10 +1,9 @@
 # Vet Plus 
 
 
- - Lembrar de colocar NPM update para pegar todos os mudlos
+ - Lembrar de utlizar o comando NPM update para baixar todos os pacotes
  - Configurar o mongoDB (por padrão o nome esta vetplus)
- - Use o "nodemon app.js" para uma melhor experiencia (caso não tenha, npm install -g nodemon )
-
+ - Use o "nodemon app.js" para uma melhor experiencia (caso não tenha, { npm install -g nodemon } , para instalar globalmente)
 
 ## Tech Stack
 
